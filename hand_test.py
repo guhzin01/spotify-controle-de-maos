@@ -17,13 +17,12 @@ options = vision.HandLandmarkerOptions(
 
 # cria o detector
 detector = vision.HandLandmarker.create_from_options(options)
-
-print("Detector criado com sucesso 🚀")
+print("Detector criado com sucesso")
 
 captura = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 if not captura.isOpened():
-    print("Não foi possível abrir a câmera")
+    print("dam dam dam ")
     exit()
 
 while True:
