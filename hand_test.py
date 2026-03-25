@@ -30,10 +30,10 @@ while True:
     success, frame = captura.read()
 
     if not success:
-        print("Erro ao acessar a câmera")
+        print("DESGRACAAAA")
         break
 
-    # DETECÇÃO
+    # detecta
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=frame_rgb)
     resultado = detector.detect(mp_image)
@@ -56,7 +56,6 @@ while True:
     # MOSTRAR IMAGEM
     cv2.imshow("Camera", frame)
 
-    # 🔥 ESSA LINHA É IMPORTANTE
     key = cv2.waitKey(1)
 
     # ESC
@@ -64,7 +63,7 @@ while True:
         print("Saindo...")
         break
 
-    # se fechar no X
+    # fechar
     if cv2.getWindowProperty("Camera", cv2.WND_PROP_VISIBLE) < 1:
         print("Janela fechada")
         break
